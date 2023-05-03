@@ -1,0 +1,29 @@
+[
+  {
+    "title": "Jane Eyre",
+    "author": "Charlotte Bronte",
+    "pages": "300",
+    "dateFinished": "12/12/12",
+    "read": "true",
+    "datePublished": "1849",
+    "genre": "romantic-drama/goth"
+  },
+  {
+    "title": "Elantris",
+    "author": "Brandon",
+    "pages": "300",
+    "dateFinished": "12/12/18",
+    "read": "true",
+    "datePublished": "1849",
+    "genre": "fantasy"
+  },
+  {
+    "title": "Warbreaker",
+    "author": "Brandon Sanderson",
+    "pages": "300",
+    "dateFinished": "12/12/20",
+    "read": "true",
+    "datePublished": "1849",
+    "genre": "fantasy"
+  }
+]

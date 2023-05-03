@@ -1,0 +1,15 @@
+GET http://localhost:3000/books
+
+
+
+GET http://localhost:3000/6448994090b41b8ad8eb37db
+
+
+
+### Create contact 
+
+POST http://localhost:3000/books HTTP/1.1
+content-type: application/json
+{
+"firstName":"Ashley", "lastName":"Weaver", "email":"aWeaver@test.com", "favoriteColor":"Brown", "birthday":"06/19/2000"
+}
