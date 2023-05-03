@@ -1,15 +1,26 @@
+
+### Get all books
 GET http://localhost:3000/books
 
 
+### Get one book
+GET http://localhost:3000/books/64528ff7d31ed336b3d85651
 
-GET http://localhost:3000/6448994090b41b8ad8eb37db
 
 
-
-### Create contact 
+### Create book
 
 POST http://localhost:3000/books HTTP/1.1
 content-type: application/json
 {
-"firstName":"Ashley", "lastName":"Weaver", "email":"aWeaver@test.com", "favoriteColor":"Brown", "birthday":"06/19/2000"
-}
+    "title": "Warbreaker",
+    "author": "Brandon",
+    "pages": "300",
+    "dateFinished": "12/12/12",
+    "read": "true",
+    "datePublished": "2000s",
+    "genre": "Fantasy"
+  },
+
+
+  
