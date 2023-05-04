@@ -14,7 +14,7 @@ POST http://localhost:3000/books HTTP/1.1
 content-type: application/json
 
 {
-    "title": "warbreaker",
+    "title": "goosebumbs",
     "author": "Brandon",
     "pages": "300",
     "dateFinished": "12/12/12",
