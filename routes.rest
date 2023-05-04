@@ -8,10 +8,37 @@ GET http://localhost:3000/books/64528ff7d31ed336b3d85651
 
 
 
-### Create book
 
+### Create
 POST http://localhost:3000/books HTTP/1.1
 content-type: application/json
+
+{
+    "title": "mistborn",
+    "author": "Brandon",
+    "pages": "300",
+    "dateFinished": "12/12/12",
+    "read": "true",
+    "datePublished": "2000s",
+    "genre": "Fantasy"
+}
+
+
+  //Production Deploy
+
+
+###
+GET https://tracker-iio1.onrender.com/books
+
+### Get contact by id 
+
+GET https://tracker-iio1.onrender.com/books/64528ff7d31ed336b3d85651
+
+### Create contact 
+
+POST https://tracker-iio1.onrender.com/books HTTP/1.1
+content-type: application/json
+
 {
     "title": "Warbreaker",
     "author": "Brandon",
@@ -23,4 +50,4 @@ content-type: application/json
   },
 
 
-  
+

@@ -1,0 +1,23 @@
+[
+  {
+    "firstName": "Camila",
+    "lastName": "Gallegos",
+    "username": "camigm1",
+    "birthday": "12/12/12",
+    "email": "camigm1@test.com"
+  },
+  {
+    "firstName": "felipe",
+    "lastName": "Gallegos",
+    "username": "felipeG",
+    "birthday": "12/12/12",
+    "email": "felipe@test.com"
+  },
+  {
+    "firstName": "Jorge",
+    "lastName": "Gallegos",
+    "username": "jorgeG",
+    "birthday": "12/12/12",
+    "email": "jorge@test.com"
+  }
+]

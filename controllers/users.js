@@ -22,21 +22,19 @@ const getSingle = async (req, res, next) => {
   });
 };
 
-const createBook = async (req, res) => {
-  const book = {
-    title: req.body.title,
-    author: req.body.author,
-    pages: req.body.pages,
-    dateFinished: req.body.dateFinished,
-    read: req.body.read,
-    datePublished: req.body.datePublished,
-    genre: req.body.genre,
+const createUser = async (req, res) => {
+  const user = {
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+    username: req.body.username,
+    birthday: req.body.birthday,
+    email: req.body.email,
   };
   const response = await mongodb
     .getDb()
     .db()
-    .collection("books")
-    .insertOne(book);
+    .collection("users")
+    .insertOne(user);
   if (response.acknowledged) {
     res.status(201).json(response);
   } else {
@@ -48,22 +46,20 @@ const createBook = async (req, res) => {
   }
 };
 
-const updateBook = async (req, res) => {
+const updateUser = async (req, res) => {
   const userId = new ObjectId(req.params.id);
   // be aware of updateOne if you only want to update specific fields
   const book = {
-    title: req.body.title,
-    author: req.body.author,
-    pages: req.body.pages,
-    dateFinished: req.body.dateFinished,
-    read: req.body.true,
-    datePublished: req.body.datePublished,
-    genre: req.body.genre,
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+    username: req.body.username,
+    birthday: req.body.birthday,
+    email: req.body.email,
   };
   const response = await mongodb
     .getDb()
     .db()
-    .collection("books")
+    .collection("users")
     .replaceOne({ _id: userId }, book);
   console.log(response);
   if (response.modifiedCount > 0) {
@@ -77,12 +73,12 @@ const updateBook = async (req, res) => {
   }
 };
 
-const deleteBook = async (req, res) => {
+const deleteUser = async (req, res) => {
   const userId = new ObjectId(req.params.id);
   const response = await mongodb
     .getDb()
     .db()
-    .collection("books")
+    .collection("users")
     .deleteOne({ _id: userId }, true);
   console.log(response);
   if (response.deletedCount > 0) {
@@ -99,7 +95,7 @@ const deleteBook = async (req, res) => {
 module.exports = {
   getAll,
   getSingle,
-  createBook,
-  updateBook,
-  deleteBook,
+  createUser,
+  updateUser,
+  deleteUser,
 };

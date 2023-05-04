@@ -1,16 +1,16 @@
 const express = require("express");
 const router = express.Router();
 
-const contactsController = require("../controllers/books");
+const booksController = require("../controllers/books");
 
-router.get("/", contactsController.getAll);
+router.get("/", booksController.getAll);
 
-router.get("/:id", contactsController.getSingle);
+router.get("/:id", booksController.getSingle);
 
-router.post("/:id", contactsController.createBook);
+router.post("/", booksController.createBook);
 
-router.put("/:id", contactsController.updateBook);
+router.put("/:id", booksController.updateBook);
 
-router.delete("/:id", contactsController.deleteBook);
+router.delete("/:id", booksController.deleteBook);
 
 module.exports = router;
