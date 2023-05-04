@@ -14,7 +14,7 @@ POST http://localhost:3000/books HTTP/1.1
 content-type: application/json
 
 {
-    "title": "mistborn",
+    "title": "warbreaker",
     "author": "Brandon",
     "pages": "300",
     "dateFinished": "12/12/12",
@@ -30,11 +30,11 @@ content-type: application/json
 ###
 GET https://tracker-iio1.onrender.com/books
 
-### Get contact by id 
+### Get book by id 
 
 GET https://tracker-iio1.onrender.com/books/64528ff7d31ed336b3d85651
 
-### Create contact 
+### Create book
 
 POST https://tracker-iio1.onrender.com/books HTTP/1.1
 content-type: application/json
@@ -42,7 +42,7 @@ content-type: application/json
 {
     "title": "Warbreaker",
     "author": "Brandon",
-    "pages": "300",
+    "pages": "400",
     "dateFinished": "12/12/12",
     "read": "true",
     "datePublished": "2000s",
@@ -95,7 +95,7 @@ POST https://tracker-iio1.onrender.com/users HTTP/1.1
 content-type: application/json
 
 {
-    "firstName": "Jorge",
+    "firstName": "veronica",
     "lastName": "Gallegos",
     "username": "jorgeG",
     "birthday": "12/12/12",
