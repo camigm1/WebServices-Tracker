@@ -63,7 +63,7 @@ GET http://localhost:3000/users
 
 ###Get single user
 
-GET http://localhost:3000/books/6453315773fca723aca21dd2
+GET http://localhost:3000/users/6453315773fca723aca21dd2
 
 
 ### Create User
