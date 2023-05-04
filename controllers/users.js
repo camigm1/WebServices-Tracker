@@ -49,7 +49,7 @@ const createUser = async (req, res) => {
 const updateUser = async (req, res) => {
   const userId = new ObjectId(req.params.id);
   // be aware of updateOne if you only want to update specific fields
-  const book = {
+  const user = {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
     username: req.body.username,
@@ -60,7 +60,7 @@ const updateUser = async (req, res) => {
     .getDb()
     .db()
     .collection("users")
-    .replaceOne({ _id: userId }, book);
+    .replaceOne({ _id: userId }, user);
   console.log(response);
   if (response.modifiedCount > 0) {
     res.status(204).send();
