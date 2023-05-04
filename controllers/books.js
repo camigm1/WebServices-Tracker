@@ -2,7 +2,7 @@ const mongodb = require("../db/connect");
 const ObjectId = require("mongodb").ObjectId;
 
 const getAll = async (req, res, next) => {
-  const result = await mongodb.getDb().db().collection("users").find();
+  const result = await mongodb.getDb().db().collection("books").find();
   result.toArray().then((lists) => {
     res.setHeader("Content-Type", "application/json");
     res.status(200).json(lists);
@@ -14,7 +14,7 @@ const getSingle = async (req, res, next) => {
   const result = await mongodb
     .getDb()
     .db()
-    .collection("users")
+    .collection("books")
     .find({ _id: userId });
   result.toArray().then((lists) => {
     res.setHeader("Content-Type", "application/json");
