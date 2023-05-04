@@ -24,7 +24,7 @@ content-type: application/json
 }
 
 
-  //Production Deploy
+ //Production Deploy
 
 
 ###
@@ -51,3 +51,53 @@ content-type: application/json
 
 
 
+
+
+
+
+// Users
+
+###Get all users
+
+GET http://localhost:3000/users
+
+###Get single user
+
+GET http://localhost:3000/books/6453315773fca723aca21dd2
+
+
+### Create User
+
+POST http://localhost:3000/users HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Jorge",
+    "lastName": "Gallegos",
+    "username": "jorgeG",
+    "birthday": "12/12/12",
+    "email": "jorge@test.com"
+  }
+
+
+  // Production Deploy
+
+###
+
+GET https://tracker-iio1.onrender.com/users
+
+### get user by id
+
+GET https://tracker-iio1.onrender.com/users/6453315773fca723aca21dd2
+
+### create user
+POST https://tracker-iio1.onrender.com/users HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Jorge",
+    "lastName": "Gallegos",
+    "username": "jorgeG",
+    "birthday": "12/12/12",
+    "email": "jorge@test.com"
+  }
