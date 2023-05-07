@@ -19,6 +19,13 @@ app
 
 app.use(cors());
 
+process.on("uncaughtException", (err, origin) => {
+  console.log(
+    process.stderr.fd,
+    `Caught exception: ${err}\n` + `Exception origin: ${origin}`
+  );
+});
+
 mongodb.initDb((err, mongodb) => {
   if (err) {
     console.log(err);

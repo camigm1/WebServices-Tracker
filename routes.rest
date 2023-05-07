@@ -24,6 +24,17 @@ content-type: application/json
 }
 
 
+### PUT contact 
+PUT http://localhost:3000/books/64528ff7d31ed336b3d85653 HTTP/1.1
+content-type: application/json
+
+{"_id":"64528ff7d31ed336b3d85653","title":"any","author":"any","pages":"any","dateFinished":"any","read":"any","datePublished":"2016","genre":"any"},
+
+### DELETE contact 
+DELETE http://localhost:3000/contacts/645348be9bc6ab7274467d71 HTTP/1.1
+
+
+
  //Production Deploy
 
 
@@ -48,6 +59,23 @@ content-type: application/json
     "datePublished": "2000s",
     "genre": "Fantasy"
   },
+
+
+### update book
+
+PUT https://tracker-iio1.onrender.com/books/64528ff7d31ed336b3d85653 HTTP/1.1
+content-type: application/json
+
+{"_id":"64528ff7d31ed336b3d85653","title":"any","author":"any","pages":"any","dateFinished":"any","read":"any",
+"datePublished":"2016","genre":"any"},
+
+### delete book
+
+DELETE https://tracker-iio1.onrender.com/books/645343519c3403bb84edb177 HTTP/1.1
+
+
+
+
 
 
 
@@ -79,6 +107,25 @@ content-type: application/json
     "email": "jorge@test.com"
   }
 
+### update
+
+PUT http://localhost:3000/users/6453315773fca723aca21dd4 HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Jorge",
+    "lastName": "Gallegos",
+    "username": "jorgeG",
+    "birthday": "12/12/12",
+    "email": "jorge@test.com"
+  }
+
+### delete
+DELETE http://localhost:3000/users/6453315773fca723aca21dd2
+
+
+
+
 
   // Production Deploy
 
@@ -101,3 +148,17 @@ content-type: application/json
     "birthday": "12/12/12",
     "email": "jorge@test.com"
   }
+
+### update
+
+PUT https://tracker-iio1.onrender.com/users/6453315773fca723aca21dd2 HTTP/1.1
+content-type: application/json
+
+{"_id":"6453315773fca723aca21dd2",
+"firstName":"Camila",
+"lastName":"Gallegos","username":"camigm1","birthday":"12/12/12","email":"camigm1@test.com"}
+
+
+### delete
+
+DELETE https://tracker-iio1.onrender.com/users/6453315773fca723aca21dd3
