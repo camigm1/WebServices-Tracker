@@ -7,7 +7,7 @@ const { isAuthenticated } = require("../middleware/authenticate");
 
 router.get("/", usersController.getAll);
 
-router.get("/:username", usersController.getSingle);
+router.get("/:id", usersController.getSingle);
 
 router.post(
   "/",

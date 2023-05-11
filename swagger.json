@@ -249,7 +249,7 @@
         }
       }
     },
-    "/users/{username}": {
+    "/users/{id}": {
       "get": {
         "description": "",
         "produces": [
@@ -257,7 +257,7 @@
         ],
         "parameters": [
           {
-            "name": "username",
+            "name": "id",
             "in": "path",
             "required": true,
             "type": "string"
@@ -271,7 +271,9 @@
             "description": "Bad Request"
           }
         }
-      },
+      }
+    },
+    "/users/{username}": {
       "put": {
         "description": "",
         "parameters": [
