@@ -1,12 +1,13 @@
-const validator = require("validate-helper.js");
+const validator = require("./validate-helper.js");
 
 const saveUser = async (req, res, next) => {
   const validationRule = {
     firstName: "required|string",
     lastName: "required|string",
     username: "required|string",
+    password: "required|string",
     birthday: "string",
-    email: "required|string|email",
+    email: "required|email",
   };
 
   await validator(req.body, validationRule, {}, (err, status) => {

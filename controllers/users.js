@@ -3,10 +3,11 @@ const ObjectId = require("mongodb").ObjectId;
 
 const getAll = async (req, res, next) => {
   const result = await mongodb.getDb().db().collection("users").find();
-  result.toArray((err, lists) => {
+  result.toArray().then((err, lists) => {
     if (err) {
       res.status(400).json({ message: err });
     }
+    console.log(lists);
     res.setHeader("Content-Type", "application/json");
     res.status(200).json(lists);
   });
@@ -14,6 +15,9 @@ const getAll = async (req, res, next) => {
 
 const getSingle = async (req, res, next) => {
   const userId = new ObjectId(req.params.id);
+  if (!ObjectId.isValid(req.params.id)) {
+    res.status(400).json("Must use valid contact id to find contact.");
+  }
   const result = await mongodb
     .getDb()
     .db()
@@ -24,7 +28,7 @@ const getSingle = async (req, res, next) => {
       res.status(400).json({ message: err });
     }
     res.setHeader("Content-Type", "application/json");
-    res.status(200).json(lists);
+    res.status(200).json(lists[0]);
   });
 };
 
@@ -33,6 +37,7 @@ const createUser = async (req, res) => {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
     username: req.body.username,
+    password: req.body.password,
     birthday: req.body.birthday,
     email: req.body.email,
   };
@@ -54,11 +59,15 @@ const createUser = async (req, res) => {
 
 const updateUser = async (req, res) => {
   const userId = new ObjectId(req.params.id);
+  if (!ObjectId.isValid(req.params.id)) {
+    res.status(400).json("Must use valid contact id to find contact.");
+  }
   // be aware of updateOne if you only want to update specific fields
   const user = {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
     username: req.body.username,
+    password: req.body.password,
     birthday: req.body.birthday,
     email: req.body.email,
   };
@@ -81,6 +90,9 @@ const updateUser = async (req, res) => {
 
 const deleteUser = async (req, res) => {
   const userId = new ObjectId(req.params.id);
+  if (!ObjectId.isValid(req.params.id)) {
+    res.status(400).json("Must use valid contact id to delete contact.");
+  }
   const response = await mongodb
     .getDb()
     .db()

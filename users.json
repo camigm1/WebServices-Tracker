@@ -3,6 +3,7 @@
     "firstName": "Camila",
     "lastName": "Gallegos",
     "username": "camigm1",
+    "password": "harrypotter10",
     "birthday": "12/12/12",
     "email": "camigm1@test.com"
   },
@@ -10,6 +11,7 @@
     "firstName": "felipe",
     "lastName": "Gallegos",
     "username": "felipeG",
+    "password": "harrypotter11",
     "birthday": "12/12/12",
     "email": "felipe@test.com"
   },
@@ -17,6 +19,7 @@
     "firstName": "Jorge",
     "lastName": "Gallegos",
     "username": "jorgeG",
+    "password": "harrypotter12",
     "birthday": "12/12/12",
     "email": "jorge@test.com"
   }
